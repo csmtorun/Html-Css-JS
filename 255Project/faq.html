@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://remixicon.com/">
+</head>
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+    .faq {
+        max-width: 1500px;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 2em;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .faq .question {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .faq .answer {
+        display: none;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    #left{
+        max-width: 750px;
+        float: left;
+        padding-top: 1em;
+    }
+
+    #right{
+        float: right;
+        max-width: 750px;
+    }
+</style>
+<script>
+    
+    function toggleAnswer(event) {
+        var answer = event.target.nextElementSibling;
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+        } else {
+            answer.style.display = "none";
+        }
+    }
+</script>
+<body>
+
+    <header>
+        <nav>
+          <ul>
+            <li><a href="project.html" onclick="">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="game.html">Customize Car</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li id="logo">yourcars</li>
+          </ul>
+        </nav>
+    </header>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+        
+        <div id="left">
+        <div class="question" onclick="toggleAnswer(event)">Q: Can I schedule a test drive?</div>
+        <div class="answer">
+            A: Yes, you can schedule a test drive by contacting our sales team. They will assist you in setting up a
+            convenient time for your test drive.
+            <i class="ri-add-line"></i>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(event)">Q: Do you offer financing options?</div>
+        <div class="answer">
+            A: Yes, we provide financing options for car purchases. Our finance department can guide you through the
+            process and help you choose the best financing option for your needs.
+        </div>
+
+        <div class="question" onclick="toggleAnswer(event)">Q: What is the warranty coverage on your cars?</div>
+        <div class="answer">
+            A: Each car comes with a manufacturer warranty. The duration and coverage of the warranty may vary depending
+            on the make and model of the car. Our sales team can provide you with detailed information about the
+            warranty for a specific car.
+        </div>
+        <div class="question" onclick="toggleAnswer(event)">Q: What types of payment options do you accept?</div>
+        <div class="answer">
+            A: We accept various payment methods, including cash, credit/debit cards, bank transfers, and financing options. Please reach out to our sales team for more details.
+
+        </div>
+        <div class="question" onclick="toggleAnswer(event)">Q: Can I trade in my current vehicle when purchasing a car from your dealership?</div>
+        <div class="answer">
+            A: Absolutely! We accept trade-ins and offer competitive valuations. Our experts will assess the value of your vehicle to provide you with a fair trade-in offer.
+        </div>
+    </div>
+    <div id="right">
+        <div class="question" onclick="toggleAnswer(event)">Q: Are your vehicles thoroughly inspected before being sold?</div>
+        <div class="answer">
+            A: Yes, we have a rigorous inspection process for all our vehicles. Our certified technicians conduct comprehensive inspections to ensure that the cars meet high-quality standards before they are made available for sale.
+
+        </div>
+        <div class="question" onclick="toggleAnswer(event)">Q: Do you offer after-sales services and maintenance?</div>
+        <div class="answer">
+            A: Yes, we have a dedicated service center to provide after-sales services and maintenance for your purchased vehicle. Our trained technicians can handle regular maintenance, repairs, and other necessary services.
+        </div>
+        <div class="question" onclick="toggleAnswer(event)">Q: What is the process for purchasing a car from your dealership?</div>
+        <div class="answer">
+            A: Purchasing a car from our dealership is a simple and straightforward process. You can browse our inventory online, visit our showroom to see the cars in person, and work with our sales team to select the right vehicle for you. Once you've chosen a car, our team will assist you with financing, paperwork, and any additional services you may require.
+        </div>
+        <div class="question" onclick="toggleAnswer(event)">Q: Can I get a vehicle history report for the used cars you sell?</div>
+        <div class="answer">
+            A: Yes, we understand the importance of transparency when it comes to used cars. We provide comprehensive vehicle history reports for all our used cars. These reports include important details such as previous ownership, accident history (if any), service records, and more. You can request a vehicle history report for any car you're interested in.
+        </div>
+        <div class="question" onclick="toggleAnswer(event)">Q: Do you offer any warranties for the cars you sell?</div>
+        <div class="answer">
+            A: Yes, we offer warranties for added peace of mind. Our new cars come with manufacturer warranties, while our used cars may have available warranty options. The specific warranty coverage and duration depend on factors such as the car's age, mileage, and condition. Our sales team will provide you with detailed information regarding warranty options for the car you choose.
+        </div>
+    </div>
+
+
+
+    </div>
+    
+</body>
+</html>

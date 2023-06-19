@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllCars</title>
+    <style>
+        #allcars {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+
+
+        header {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #row1 {
+
+            display: flex;
+            justify-content: space-between;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        #row1 img {
+
+            height: 200px;
+            width: 350px;
+
+
+        }
+
+        #row2 {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 50px;
+        }
+
+        #row2 img {
+
+            height: 200px;
+            width: 350px;
+
+        }
+
+        #row3 {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 50px;
+        }
+
+        #row3 img {
+
+            height: 200px;
+            width: 350px;
+
+        }
+
+        #row4 {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 50px;
+        }
+
+        #row4 img {
+
+            height: 200px;
+            width: 350px;
+
+        }
+
+        img:hover {
+
+            opacity: 0.2;
+
+        }
+
+        a #button {
+            display: none;
+        }
+
+        a:hover #button {
+
+            display: block;
+            color: green;
+            font-size: 25px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="project.html" onclick="">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#customize">Customize Car</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li id="logo">yourcars</li>
+            </ul>
+        </nav>
+    </header>
+    <h1 align="center">All Cars</h1>
+    <div id="allItems">
+        <div id="row1">
+            <a href=""><img src="./Cars/AllHatchback.jpeg">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/AllHatchback2.jpeg" alt="2">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/AllPickup.jpeg" alt="3">
+                <div id="button"><button>Contact</button></div>
+            </a>
+
+        </div>
+
+        <div id="row2">
+            <a href=""><img src="./Cars/Allpickup2.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/Allsedan.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/AllSedan2.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+
+        </div>
+
+        <div id="row3">
+            <a href=""><img src="./Cars/AllSedan3.jpg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/AllSUV.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/AllSUV2.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+
+        </div>
+
+        <div id="row4">
+            <a href=""><img src="./Cars/AllWagon.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/Allwagon2.jpeg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+            <a href=""><img src="./Cars/Sedan4.jpg" alt="">
+                <div id="button"><button>Contact</button></div>
+            </a>
+
+        </div>
+    </div>
+
+    <div id="allcars">
+        <h3>Choose Car Type</h3>
+        <select name="cartype">
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Wagon">Wagon</option>
+            <option value="Pickup">Pickup</option>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

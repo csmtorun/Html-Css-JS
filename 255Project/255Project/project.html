@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Car Retail Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<style>
+  #paragraf {
+    color: blueviolet;
+
+
+
+  }
+
+  #circle {
+    font-size: larger;
+    color: black;
+
+
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li id="logo">yourcars</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h1>Welcome to Car Retail</h1>
+      <p>Explore our wide range of cars.</p>
+    </div>
+  </section>
+
+
+
+  <section id="inventory">
+    <div class="inventory-list">
+      <div id="circle"><a href="allcars.html">All Cars</a></div>
+      <h2>Car Inventory</h2>
+      <ul id="carList">
+
+        <li><a href="sedan.html">SEDAN</a>
+          <img id="photo" src="images/sedan.jpeg" alt="">
+        </li>
+        <li><a href="suv.html">SUV</a>
+          <img id="photo" src="images/suv.jpeg" alt="">
+        </li>
+        <li><a href="hatchback.html">HATCHBACK</a>
+          <img id="photo" src="images/hatchback.jpeg" alt="">
+        </li>
+        <li><a href="wagon.html">WAGON</a>
+          <img id="photo" src="images/station.jpeg" alt="">
+        </li>
+        <li><a href="pickup.html">PICKUP</a>
+          <img id="photo" src="images/pickup.jpeg" alt="">
+        </li>
+      </ul>
+
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <footer>
+    <div>
+      YOURCARS
+    </div>
+  </footer>
+
+  <script src="script.js">
+
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+  color: #fff;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+nav ul li a:hover {
+  color: red;
+  font-size: large;
+}
+
+.hero {
+  text-align: center;
+  background-image: url("images/car_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  padding: 100px;
+}
+
+.about-content {
+  text-align: center;
+  padding: 50px;
+}
+
+.inventory-list {
+  text-align: center;
+  padding: 50px;
+}
+
+.contact-form {
+  text-align: center;
+  padding: 50px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#carList {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+#photo {
+  width: 200px;
+  height: 110px;
+}
+
+#carList li a {
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+}
+
+#carList li a:hover {
+
+  padding: 3px;
+  background-color: pink;
+  border-radius: 5px;
+
+}
+
+#logo {
+  float: right;
+  background-color: bisque;
+
+}

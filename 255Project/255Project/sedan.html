@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUV-Cars</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: bisque;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+      color: #fff;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="project.html" onclick="">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="game.html">Customize Car</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li id="logo">yourcars</li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      /* CSS styles for the form container */
+      form {
+
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* CSS styles for the table */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+      }
+
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* CSS styles for the form elements */
+      input[type="text"],
+      select {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      /* CSS styles for the buttons */
+      input[type="button"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* CSS styles for the image */
+      img#display {
+        display: block;
+        margin: 20px auto;
+        max-width: 200px;
+      }
+
+      /* CSS styles for the heading */
+      td[colspan="2"] {
+        font-weight: bold;
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+      }
+
+      textarea[name="display"] {
+        width: 80%;
+        height: 30px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: lighter;
+        color: #333;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <form name="gradeForm">
+    <table border="1">
+      <tr>
+        <td colspan="2" align="center">FINDING THE BEST OPTION FOR YOU</td>
+      </tr>
+      <tr>
+        <td>Maximum Kilometer<br />
+          <input type="text" name="course" size="10" />
+        </td>
+        <td rowspan="6" colspan="6">
+          <img id="display" src="./images/car1.jpg" width="200px">
+          <textarea cols="30" rows="3" name="display"></textarea>
+        </td>
+      </tr>
+      <tr>
+
+        <td>
+          Year <br>
+          <input type="text" name="year" id="year" size="10">
+        </td>
+      </tr>
+      <tr>
+        <td>Brand: <br />
+          <select name="grade">
+            <option value="AUDI">AUDI</option>
+            <option value="VOLVO">VOLVO</option>
+            <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+          </select>
+        </td>
+      </tr>
+      <td>
+        <fieldset>
+          <legend>Choose an Option:</legend>
+          <label>
+            <input type="checkbox" name="manuel" id="manuelCheckbox"
+              onchange="handleCheckboxChange('manuelCheckbox')" />MANUEL
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" name="oto" id="otoCheckbox"
+              onchange="handleCheckboxChange('otoCheckbox')" />AUTOMATIC
+          </label>
+        </fieldset>
+      </td>
+
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" name="hybrid">hybrid
+          <input type="radio" name="electric">electric
+          <input type="radio" name="regular">regular
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="Report" onclick="report()" />
+        </td>
+      </tr>
+    </table>
+  </form>
+  <script type="text/javascript">
+    courses = [];
+    letter = ["F", "D", "C", "B", "A"];
+    i = 0;
+    total = 0;
+    function addCourse() {
+      courses[i] = [];
+      courses[i]["name"] = document.gradeForm.course.value;
+      courses[i]["grade"] = document.gradeForm.grade.value;
+      courses[i]["grade_letter"] = letter[courses[i]["grade"]];
+      total += parseFloat(courses[i]["grade"]);
+      document.gradeForm.display.value += courses[i]["name"] + " (" + courses[i]["grade_letter"] + ") added\n";
+      i++;
+    }
+    var sedan = [
+      {
+        kilometer: 200.000,
+        year: 2021,
+        brand: "AUDI",
+        gear: "manuel",
+        type: "regular",
+        price: 1000000
+      },
+
+
+
+      {
+        kilometer: 100.000,
+        year: 2022,
+        brand: "VOLVO",
+        gear: "automatic",
+        type: "hybrid",
+        price: 2000000
+
+
+      },
+
+      {
+        kilometer: 20.000,
+        year: 2022,
+        brand: "TESLA",
+        gear: "automatic",
+        type: "electric",
+        price: 3000000
+
+
+
+      },
+
+      {
+        kilometer: 50.000,
+        year: 2020,
+        brand: "VOLKSWAGEN",
+        gear: "manuel",
+        type: "regular",
+        price: 500000,
+
+      }
+
+
+    ]
+    // function report() {
+    //   for (var i = 0; i < sedan.length; i++) {
+
+    //     //console.log("Price: " + sedan[i].price);
+
+
+    //     if (sedan[i].kilometer == 120000) {
+
+    //       $("#display").attr("src", "./images/car34.jpg");
+    //     }
+
+    //     else if (sedan[i].brand == "VOLVO") {
+    //       $("#display").attr("src", "./images/cars2.jpg");
+    //     }
+    //   }
+
+
+
+    // }
+
+
+    function report() {
+
+
+
+      var maxKilometer = parseFloat(document.gradeForm.course.value);
+      var year = parseInt(document.getElementById('year').value);
+      var brand = document.gradeForm.grade.value;
+      var isManuel = document.gradeForm.manuel.checked;
+      var isAutomatic = document.gradeForm.oto.checked;
+      var type = "";
+
+
+
+      if (document.gradeForm.hybrid.checked) {
+        type = "hybrid";
+      } else if (document.gradeForm.electric.checked) {
+        type = "electric";
+      } else if (document.gradeForm.regular.checked) {
+        type = "regular";
+      }
+
+
+
+
+      // var filteredSedans = sedan.filter(function (car) {
+      //   var withinKilometer = car.kilometer <= maxKilometer;
+      //   var matchingYear = car.year === year;
+      //   var matchingBrand = car.brand === brand;
+      //   var matchingGear = (isManuel && car.gear === "manuel") || (isAutomatic && car.gear === "automatic");
+      //   var matchingType = car.type === type;
+
+      //   return withinKilometer && matchingYear && matchingBrand && matchingGear && matchingType;
+      // });
+
+      var found = 0;
+      var sum = 0;
+      var out = "";
+
+
+      if (maxKilometer < 100000)
+        if (year == 2020)
+          if (brand == 'VOLVO')
+            if (isManuel)
+              if (type == 'hybrid') {
+
+                $("#display").attr("src", "./Cars/Allsedan.jpeg")
+                var sum = 3500050;
+                var out = "Price = " + sum;
+                document.gradeForm.display.value = out;
+                found = 1;
+              }
+
+
+      if (maxKilometer < 50000)
+        if (year == 2015)
+          if (brand == 'AUDI')
+            if (isManuel)
+              if (type == 'regular') {
+
+                $("#display").attr("src", "./Cars/AllSedan2.jpeg")
+                var sum = 2000000;
+                var out = "Price = " + sum;
+                document.gradeForm.display.value = out;
+
+                found = 1;
+              }
+
+
+      if (maxKilometer < 300000)
+        if (year == 2017)
+          if (brand == 'VOLKSWAGEN')
+            if (isAutomatic)
+              if (type == 'regular') {
+
+                $("#display").attr("src", "./Cars/AllSedan3.jpg")
+                var sum = 3000000;
+                var out = "Price = " + sum;
+                document.gradeForm.display.value = out;
+                found = 1;
+              }
+
+
+      if (maxKilometer < 160000)
+        if (year == 2018)
+          if (brand == 'AUDI')
+            if (isAutomatic)
+              if (type == 'hybrid') {
+
+                $("#display").attr("src", "./Cars/Sedan4.jpg")
+                var sum = 2500000;
+                var out = "Price = " + sum;
+                document.gradeForm.display.value = out;
+                found = 1;
+              }
+
+      if (found == 0) {
+        $("#display").attr("src", "./Cars/donotexist.jpeg")
+        var info = "Try other options please!"
+        document.gradeForm.display.value = info;
+      }
+
+
+
+
+
+
+
+
+    }
+
+    function handleCheckboxChange(checkboxId) {
+      const checkbox = document.getElementById(checkboxId);
+      const otherCheckboxId = checkboxId === 'manuelCheckbox' ? 'otoCheckbox' : 'manuelCheckbox';
+      const otherCheckbox = document.getElementById(otherCheckboxId);
+
+      if (checkbox.checked) {
+        otherCheckbox.checked = false;
+      }
+    }
+
+  </script>
+</body>
+
+</html>
+
+</body>
+
+</html>
